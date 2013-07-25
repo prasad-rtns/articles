@@ -123,19 +123,19 @@
     /**
      * Function called when page has finished loading.
      */
-    function init() {
+   /* function init() {
         document.addEventListener("deviceready", function() {deviceReady = true;}, false);
         window.setTimeout(function() {
             if (!deviceReady) {
                 alert("Error: PhoneGap did not initialize.  Demo will not run correctly.");
             }
         },2000);
-    }
-
+    }onload="init();"
+*/
     </script>
 
   </head>
-  <body onload="init();">
+  <body >
     <h3>PhoneGap Camera Upload Demo</h3>
     
     <div>
