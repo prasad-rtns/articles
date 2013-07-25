@@ -71,10 +71,13 @@
             // Specify transfer options
             var options = new FileUploadOptions();
             options.fileKey="file";
-            options.fileName=imageURI.substr(imageURI.lastIndexOf('/')+1);
+            options.fileName=imageURI.substr(imageURI.lastIndexOf('/')+1)+'.png';
             options.mimeType="image/jpeg";
             options.chunkedMode = false;
+		
+	    var params = new Object();
 
+	    options.params = params;
             // Transfer picture to server
             var ft = new FileTransfer();
             ft.upload(imageURI, server, function(r) {
